@@ -27,19 +27,57 @@ Many to One relations on Department and Employee.
 #####Employee
 - ###### Create employee 
     Post request on `localhost:8082/employees` with body containing JSON data
+    
+    `
+    in the form
+     {
+	    "empId": "8009",
+        "empName": "Peter",
+        "department": {
+		    "deptId": "101"
+        }
+    }
+    `
 - ###### Read employees 
     GET request on `localhost:8082/employees`
 - ###### Update employee 
-    PUT request on `localhost:8082/employees` with body containing JSON data
+    POST request on `localhost:8082/employees` with body containing JSON data
+    
+    `
+    in the form
+     {
+	    "empId": "8009",
+        "empName": "Peter Parker",
+        "department": {
+		    "deptId": "101"
+        }
+    }
+    `
 - ###### Delete employee 
     DELETE request on `localhost:8082/employees/{empId}`
 
 #####Department
 - ###### Create department 
     Post request on `localhost:8082/departments` with body containing JSON data
+    
+    `
+    in the form
+    {
+	    "deptId": "105",
+        "deptName": "Systems"
+    }
+    `   
 - ###### Read departments 
     GET request on `localhost:8082/departments`
 - ###### Update department 
-    PUT request on `localhost:8082/departments` with body containing JSON data
+    POST request on `localhost:8082/departments` with body containing JSON data
+    
+    `
+    in the form
+    {
+	    "deptId": "105",
+        "deptName": "Systems Specialist"
+    }
+    `   
 - ###### Delete department 
     DELETE request on `localhost:8082/departments/{deptId}`
